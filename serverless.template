@@ -1,0 +1,24 @@
+{
+	"Description": "Delete services from Organization accounts",
+	"Parameters": {
+    	"RoleARN": {
+            "Type": "String",
+            "Description": "The ARN of the Role used by the lambda function"
+        }
+    },
+	"Resources": {
+    	"organizationActionsNukeAccounts": {
+            "Type": "AWS::Serverless::Function",
+            "Properties": {
+	            "Handler": "com.amazonaws.lambda.organizationActions.NukeAccounts",
+                "Timeout": "300",
+                "MemorySize" : "128",
+                "Description": "Deletes resources from nested accounts",
+                "Role": {
+                	"Ref": "RoleARN"
+                 }
+        	}
+        }
+    }
+	
+}

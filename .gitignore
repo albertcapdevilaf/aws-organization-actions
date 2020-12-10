@@ -1,3 +1,13 @@
+#Maven folders
+target/*
+
+#Eclipse
+.settings/*
+
+
+#SAM
+.aws-sam/*
+
 # Compiled class file
 *.class
 
